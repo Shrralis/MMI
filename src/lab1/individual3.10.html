@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Individual 3.10</title>
+    <script type="text/javascript">
+        var amount = parseInt(prompt("Enter amount of students"));
+        var sNames = [];
+        var sSurnames = [];
+
+        for (var i = 0; i < amount; i++) {
+            sNames[i] = prompt("Enter name of student №" + (i + 1));
+            sSurnames[i] = prompt("Enter surname of student №" + (i + 1));
+        }
+
+        function printData() {
+            for (i = 0; i < amount; i++) {
+                document.write("<tr><td>" + (i + 1) + "</td>" +
+                        "<td>" + sSurnames[i] + "</td>" +
+                        "<td>" + sNames[i] + "</td></tr>");
+            }
+        }
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td><b>id</b></td>
+        <td><b>Surname</b></td>
+        <td><b>Name</b></td>
+    </tr>
+    <script type="text/javascript">
+        printData();
+    </script>
+</table>
+</body>
+</html>

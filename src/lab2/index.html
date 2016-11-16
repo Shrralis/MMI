@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab2</title>
+    <script type="text/javascript">
+        function ex1() {
+            if (confirm("Упевнені, що хочете переглянути документ?") )
+            {
+                alert("Щасливої дороги");
+            }
+            else
+            {
+                alert("Tоді залишайтеся");
+                window.close()
+            }
+        }
+
+        function ex2() {
+            var bgc = document.bgColor;
+            var url = document.location;
+            var lm = document.lastModified;
+            document.write("Колір фону цієї сторінки <b>"+ bgc +"</b>")
+            document.write("<br />URL цієї сторінки <b>" +url+ "</b>")
+            document.write("<br />Останні зміни внесені- <b>"+ lm + "</b>")
+            document.bgColor="00FFFF";
+            document.writeln("<b>Hello world!</b>");
+        }
+
+        function ex3() {
+            alert("Ви знаходитеся на наступній сторінці - " + window.location.href);
+            location.href = "index.html";
+        }
+
+        function ex4() {
+            var an = navigator.appName;
+            var av = navigator.appVersion;
+            var acn = navigator.appCodeName;
+            var ua = navigator.userAgent;
+            document.write("Ви користуєтеся <b>" + an + "</b>, версія " + av + ".<br />Кодова назва " +
+                    acn + ", заголовок " + ua + ".");
+        }
+    </script>
+</head>
+<body>
+<a href="#1" onclick="ex1()">Example 1</a>
+<a href="#2" onclick="ex2()">Example 2</a>
+<a href="#3" onclick="ex3()">Example 3</a>
+<a href="#4" onclick="ex4()">Example 4</a>
+</body>
+</html>

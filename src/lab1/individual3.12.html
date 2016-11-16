@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Individual 3.12</title>
+    <script type="text/javascript">
+        function show() {
+            var table = document.getElementById("table");
+            table.setAttribute("border", "1");
+
+            for (i = 0; i < 10; i++) {
+                var row = table.insertRow(i);
+
+                for (j = 0; j < 9; j++) {
+                    var cell = row.insertCell(j);
+                    cell.innerHTML = (i + 1) * (j + 2) + "";
+                    cell.setAttribute("align", "center");
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <table id="table" />
+    <button onclick="show()">Show the table</button>
+</body>
+</html>

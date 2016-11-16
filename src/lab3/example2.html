@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Електронний годинник</title>
+    <script type="text/javascript">
+        function time() {
+            // створення об’єкту Date()
+            vr = new Date();
+            // зміна значення часу в об’екті textbox
+            chas.value = vr.getHours() + ":" + vr.getMinutes() + ":" + vr.getSeconds();
+            // Здаємо таймер із паузою 1000 мс для рекурсії
+            //функції time()
+            setTimeout("time()", 1000)
+        }
+    </script>
+</head>
+<body>
+<input type="text" name="chas" size="10">
+<script type="text/javascript">
+    time();
+</script>
+</body>
+</html>

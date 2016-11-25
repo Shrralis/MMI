@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 2</title>
+    <script>
+        function testPhoneNumber(str)
+        {
+            if(!str.length)
+                alert("Номер телефону задано некоректно");
+            var phoneTemplate = new RegExp("2?[0-9]{6}");
+            str = str.replace(phoneTemplate,"");
+            if(str != "")
+                alert("Номер телефону задано некоректно");
+        }
+    </script>
+</head>
+<body>
+<textarea rows="4" cols="20" id="textarea1"></textarea>
+<br>
+<input
+        type="button"
+        value="Test"
+        onclick="testPhoneNumber(document.getElementById('textarea1').value);">
+</body>
+</html>

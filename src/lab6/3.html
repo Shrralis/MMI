@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script>
+        function myFunc(str)
+        {
+            if(!str.length)
+                alert("Це не поштовий індекс Львову");
+            var cellPhoneTemplate = new RegExp("79\\d{3}");
+            str = str.replace(cellPhoneTemplate,"");
+            if(str != "")
+                alert("Це не поштовий індекс Львову");
+        }
+    </script>
+</head>
+<body>
+<textarea rows="4" cols="20" id="textarea1"></textarea>
+<br>
+<input
+        type="button"
+        value="Test"
+        onclick="myFunc(document.getElementById('textarea1').value);">
+</body>
+</html>

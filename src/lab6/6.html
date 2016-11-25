@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script>
+        function myFunc(str) {
+            document.getElementById('textarea1').value = clearTextFromHTMLTags(str);
+        }
+        function clearTextFromHTMLTags(textForEditing)
+        {
+            var tagTemplate = new RegExp("<(\\/)?((p)|(font)|(br)|(hr))>","g");
+            return textForEditing.replace(tagTemplate,"");
+        }
+    </script>
+</head>
+<body>
+<textarea rows="4" cols="20" id="textarea1"></textarea>
+<br>
+<input
+        type="button"
+        value="Test"
+        onclick="myFunc(document.getElementById('textarea1').value);">
+</body>
+</html>

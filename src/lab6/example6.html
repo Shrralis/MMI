@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 6</title>
+    <script>
+        function checkEmail(str) {
+            if(!str.length)
+                alert("Incorrect e-mail!");
+            /* Якщо рядок пустий, то він не є електронною адресою */
+            var re = new RegExp("[a-zA-Z_.]+@{1}[a-zA-Z_.]+[\.]{1}[a-zA-Z_]+");
+            str = str.replace(re, "");
+// замінимо знайдений перший екземпляр шаблону пустим рядком
+            if(!str.length)
+            /* якщо після заміни в рядку не лишиться символів, то записана
+             коректна адреса, про що ми і повідомимо: */
+                alert('OK');
+            else
+// інакше адреса неправильна
+                alert("Incorrect e-mail!");
+        }
+    </script>
+</head>
+<body>
+<textarea rows="4" cols="20" id="textarea1"></textarea>
+<br>
+<input
+        type="button"
+        value="Test"
+        onclick="checkEmail(document.getElementById('textarea1').value);">
+</body>
+</html>

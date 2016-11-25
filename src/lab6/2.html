@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script>
+        function testCellPhoneNumber(str)
+        {
+            if(!str.length)
+                alert("Номер мобільного телефону задано некоректно");
+            var cellPhoneTemplate = new RegExp("(8|(\\+38))?((063)|(093)|(067)|(097)|(098)|(096)|(095)|(099)|(066)|(068)|(073)|(050))[0-9]{7}");
+            str = str.replace(cellPhoneTemplate,"");
+            if(str != "")
+                alert("Номер мобільного телефону задано некоректно");
+        }
+    </script>
+</head>
+<body>
+<textarea rows="4" cols="20" id="textarea1"></textarea>
+<br>
+<input
+        type="button"
+        value="Test"
+        onclick="testCellPhoneNumber(document.getElementById('textarea1').value);">
+</body>
+</html>

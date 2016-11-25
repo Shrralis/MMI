@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Приклад 3</title>
+    <script>
+        function myFunc(str) {
+            document.getElementById('textarea1').value = removeRedundantSpaces(str);
+        }
+        function removeRedundantSpaces(text_for_Editing)
+        {
+            var extraSpaces = new RegExp("[ ]{2,}","g");
+            return text_for_Editing.replace(extraSpaces," ");
+        }
+    </script>
+</head>
+<body>
+<textarea rows="4" cols="20" id="textarea1"></textarea>
+<br>
+<input
+        type="button"
+        value="Test"
+        onclick="myFunc(document.getElementById('textarea1').value);">
+</body>
+</html>
